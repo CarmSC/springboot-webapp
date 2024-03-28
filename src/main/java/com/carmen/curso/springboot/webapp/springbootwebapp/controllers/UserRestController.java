@@ -1,6 +1,8 @@
 package com.carmen.curso.springboot.webapp.springbootwebapp.controllers;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +26,22 @@ public class UserRestController {
 
         return userDto;
     }
+
+    @GetMapping("/list")
+    public List<User> list() {
+        User user = new User("Carmen", "Salas");
+        User user2 = new User("Aurora", "Ruiz");
+        User user3 = new User("Maria", "Perez");
+
+        List<User> users = Arrays.asList(user, user2, user3);
+        // List<User> users = new ArrayList<>();
+        // users.add(user);
+        // users.add(user2);
+        // users.add(user3);
+
+        return users;
+    }
+
      @GetMapping(path = "/details-map")
       public Map<String, Object> detailsMap() {
             User user= new User("Carmen", "Cabrera");
