@@ -25,11 +25,11 @@ public class UserController {
       
       @GetMapping("/list")
       public String list(ModelMap model) {
-          List<User> users = new ArrayList<>();
+            List<User> users = new ArrayList<>();
   
-          model.addAttribute("users", users);
-        model.addAttribute("title", "Listado de usuarios!");
-        return "list";
+            model.addAttribute("users", users);
+            model.addAttribute("title", "Listado de usuarios!");
+            return "list";
     }
 
 }
