@@ -52,7 +52,7 @@ public class PathVariableController {
     public User create(@RequestBody User user) {
         
         user.setName(user.getName().toUpperCase());
-        user.setLastname(user.getLastname().toUpperCase());
+        //user.setLastname(user.getLastname().toUpperCase());
         return user;
     }
 
